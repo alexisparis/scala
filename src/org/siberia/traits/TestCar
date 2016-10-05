@@ -1,0 +1,24 @@
+package org.siberia.traits
+
+/**
+ * Created by IntelliJ IDEA.
+ * User: paria
+ * Date: 26/07/11
+ * Time: 14:11
+ * To change this template use File | Settings | File Templates.
+ */
+
+
+
+object TestCar
+{
+  def main(args : Array[String])
+  {
+    val hybrid = new HybridCar()
+    hybrid.drive
+
+    // trait can be linked at runtime (for more details, have a look at http://blog.furiousbob.com/2011/06/28/why-moving-to-scala-part-ii/)
+    val ovni = new Car with OilCar
+    ovni.drive
+  }
+}
